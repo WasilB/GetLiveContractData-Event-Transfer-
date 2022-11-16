@@ -46,6 +46,7 @@ const connectDb = async () => {
       let latest_block = await web3.eth.getBlockNumber(); //gets the latest block number
 
       if (fromBlockNumber > latest_block) {
+        console.log("No new blocks");
         toBlockNumber = latest_block;
         fromBlockNumber = latest_block;
       } else {
