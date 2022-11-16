@@ -29,6 +29,7 @@ const connectDb = async () => {
     const CONTRACT_ADDRESS = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
     const CONTRACT_ABI = require("./abi");
     const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
+    //get all events from contract (iterate through each transaction)
     function getTransferDetails(data_events) {
       for (i = 0; i < data_events.length; i++) {
         let from = data_events[i]["returnValues"]["from"]; // gets the from address
