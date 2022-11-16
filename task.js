@@ -24,7 +24,7 @@ const connectDb = async () => {
 
     console.log(`fromBlockNumber: ${fromBlockNumber}`);
 
-    let toBlockNumber = fromBlockNumber + 250;
+    let toBlockNumber = fromBlockNumber + 200;
 
     const CONTRACT_ADDRESS = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
     const CONTRACT_ABI = require("./abi");
@@ -77,7 +77,7 @@ const connectDb = async () => {
 };
 
 var job = new CronJob(
-  "*/10 * * * * *",
+  "*/20 * * * * *",
   function () {
     console.log("CRON STARTED");
     console.log("WILL RUN EVERY 10 SECONDS");
